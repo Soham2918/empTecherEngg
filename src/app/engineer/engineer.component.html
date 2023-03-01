@@ -1,0 +1,23 @@
+<br><br><h1>Get All Engineer Here</h1>
+<button mat-raised-button color="primary" (click)="getEnggSer()"> Show All Engg</button> &nbsp;
+<button mat-raised-button color="accent" [routerLink]="'/add-engg'"> Add New Engg</button><br><br>
+
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>e-mail Id</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let en of EnggData">
+        <td>{{en.id}}</td>
+        <td> {{en.firstName}} </td>
+        <td> {{en.lastName}} </td>
+        <td> {{en.emailId}} </td>
+        <td>
+            <button [routerLink]="['/update-engg',en.id]">Update</button>
+            <button (click)="deleteEnggSer(en.id)" >Delete</button>
+        </td>
+    </tr>
+</table>

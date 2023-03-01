@@ -1,0 +1,10 @@
+<p>add-employee works!</p>
+<form [formGroup]="SaveEmpForm">
+    <!-- id: <input type="text" name="id" formControlName="id"><br> -->
+    firstName: <input type="text" name="firstName" formControlName="firstName" ><br>
+    lastName: <input type="text" name="lastName" formControlName="lastName"><br>
+    email Id: <input type="text" name="emailId" formControlName="emailId"><br>
+        
+    <button (click)="saveEmp()" >Save</button>
+    </form>
+

@@ -1,0 +1,24 @@
+<h1>All Teachers </h1>
+<button (click)="allTeacherM()" mat-raised-button color="primary" >View Teacher</button>&nbsp;
+<button [routerLink]="'/saveteachers'" mat-raised-button color="accent">Save Teacher</button><br><br> 
+
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>e-mail</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let em of teacherData">
+        <td>{{em.id}}</td>
+        <td>{{em.firstName}}</td>
+        <td>{{em.lastName}}</td>
+        <td>{{em.subject}}</td>
+        <td>
+            &nbsp;<button [routerLink]="['/updateteacher',em.id]" mat-raised-button color="primary">Update</button>  &nbsp;
+            <button (click)="deleteTeac(em.id)" mat-raised-button color="warn">Delete</button>&nbsp;
+            
+        </td>
+    </tr>
+</table>

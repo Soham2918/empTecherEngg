@@ -1,0 +1,11 @@
+<p>saveteachers works!</p>
+
+
+<form [formGroup]="saveteacherForm">
+    <!-- id: <input type="text" name="id" formControlName="id"><br> -->
+    firstName: <input type="text" name="firstName" formControlName="firstName" ><br>
+    lastName: <input type="text" name="lastName" formControlName="lastName"><br>
+    Subject: <input type="text" name="subject" formControlName="subject"><br>
+        
+    <button (click)="saveTeacher()" >Save</button>
+    </form>

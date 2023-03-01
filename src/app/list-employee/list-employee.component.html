@@ -1,0 +1,25 @@
+<br><h1>List Of Employee</h1>
+
+<button (click)="empList()" mat-raised-button color="primary" >View Emp</button>&nbsp;
+<button [routerLink]="'/add-employee'" mat-raised-button color="accent">Add Employee</button><br><br> 
+
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>e-mail</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let em of empData">
+        <td>{{em.id}}</td>
+        <td>{{em.firstName}}</td>
+        <td>{{em.lastName}}</td>
+        <td>{{em.emailId}}</td>
+        <td>
+            &nbsp;<button [routerLink]="['/update-employee',em.id]" mat-raised-button color="primary">Update</button> 
+            <button (click)="deleteSer(em.id)" mat-raised-button color="warn">Delete</button>&nbsp;
+            
+        </td>
+    </tr>
+</table>
